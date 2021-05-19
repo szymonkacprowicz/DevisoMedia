@@ -1,0 +1,413 @@
+@import 'colors';
+@import 'animation';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-padding-top: 98px ;
+}
+
+body {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $bg-color;
+}
+
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;background-color: $main-color;
+    margin: 0 auto 40px;
+}
+
+.blue-text {
+    color: $main-color;
+}
+
+.shadow-bg{
+    background-color: #333;
+    opacity: .8;
+}
+
+nav {
+    text-transform: uppercase;
+    transition:  .5s;
+    z-index: 1;
+
+    a,
+    i {
+        color: $white;
+    }
+
+    a:hover {
+        color: $main-color;
+    }
+
+    .fa-bars {
+        padding: 10px;
+    }
+
+    .navbar-brand {
+        font-weight: bold;
+    }
+
+    .active {
+        color: $main-color;
+    }
+}
+
+header {
+    color: $white;
+
+    h1 {
+        font-size: 42px;
+        text-transform: uppercase;
+    }
+    font-size: 14px;
+}
+
+.hero-img {
+    position: relative;
+    height: 100vh;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url(/img/playstation-1845880_640.jpg);
+    z-index: 0;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.hero-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    background-color: #333;
+    z-index: -5;
+}
+
+.aboutus-hero {
+    position: relative;
+    background-image: url(/img/technology-2818664_640.jpg);
+   background-size: cover;
+   background-position: center;
+   color: $light_gray;
+   z-index: 0;
+
+   .aboutus-shadow {
+       position: absolute;
+       top: 0;
+       width: 100%;
+       height: 100%;
+       background-color: rgba(0, 0, 0, .7);
+      z-index: -5;
+
+   }
+
+   .aboutus-hero-item {
+       margin: 10px 0;
+
+       i {
+           font-size: 38px;
+       }
+
+       .aboutus-hero-title {
+           font-size: 24px;
+       }
+       
+   }
+
+
+}
+
+@media (min-width: 1200px) {
+    .hero-img{
+        background-image: url(/img/playstation-1845880_1920.jpg);
+    }
+}
+
+.btn-outline-light {
+    text-transform: uppercase;
+}
+
+.fa-chevron-down {
+    position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+    font-size: 36px;
+    color: $white;
+}
+
+
+.aboutus {
+
+    i {
+        margin-top: 20px;
+        font-size: 30px;
+    }
+
+    .aboutus-card-title {
+     font-size: 18px;
+     text-transform: uppercase;
+     margin-bottom: 2px;
+     
+    }
+    .aboutus-card-text {
+        font-size: 14px;
+    }
+
+    .aboutus-hover {
+        transition: 0.5s;
+
+}
+
+    .aboutus-hover:hover {
+        color: $main-color;
+    }
+}
+
+.portfolio {
+   
+    .carousel-item {
+        position: relative;
+        height: 600px;
+    }
+    .carousel-caption
+    {
+        padding: 40px 0;
+        left: 0;
+        right: 0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, .7);
+    }
+
+    .carousel-indicators {
+        padding-bottom: 20px; 
+    }
+    
+}
+
+.prices {
+
+    .price-box {
+        margin: 20px 10px;
+        padding: 30px;
+        background-color: $white;
+        box-shadow: 5px 5px  5px rgb(90, 84, 84);
+        transition: transform .3s;
+
+        h3 {
+            text-transform: uppercase;
+            color: $light_gray;
+            
+          }
+
+        span {
+            font-weight: bold;
+        }
+    
+        button {
+            text-transform: uppercase;
+            padding: 10px 20px;
+        }
+    
+        i {
+            padding: 0 5px;
+            font-size: 24px;
+    
+        }
+    
+        .price-cost {
+            font-weight: bold;
+            font-size: 36px;
+        }
+    
+    }
+
+    .price-box:hover
+    {
+        transform: scale(1.05);
+    }
+
+    .price-info {
+        margin-top: 30px;
+
+        a{
+            text-decoration: none;
+        }
+    }
+}   
+
+.team {
+    position: relative;
+    background-image: url(/img/team-bg/conference-room-768441_1920.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    z-index: 0;
+   
+
+    h2 {
+        color: $light_gray;
+    }
+
+    .team-shadow {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .7);
+        z-index: -5 ;
+    }
+
+    .card {
+        transition: transform .3s;
+        img {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        i {
+            padding: 20px;
+        }
+        
+        h5 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .card-body{
+            height: 180px;
+        }
+
+    }
+    
+    .card:hover {
+        transform: scale(.96);
+    }
+}
+
+.achievement-list {
+    padding: 20px;
+    
+    i {
+        font-size: 46px;
+        padding-bottom: 5px;
+        color: $white;
+        text-shadow: 0 0 5px black;
+    }
+
+    .achievement-number {
+        font-size: 24px;
+    }
+
+    .achevement-text {
+        font-size: 16px;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+}
+
+.contact {
+    position: relative;
+    color: $light_gray;
+    background-image: url(/img/skyline-1869214_1920.jpg);
+    background-attachment: fixed;
+    z-index: 10;
+
+    h2 {
+        font-weight: bold;
+    }
+
+    h3 {
+        text-transform: uppercase;
+        padding: 10px 0;
+    }
+
+    i {
+        font-size: 28px;
+        color: $light_gray;
+        
+    }
+
+}
+
+.contact-shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0.4;
+    background-color: black;
+    z-index: -5;
+}
+
+
+
+@media (min-width: 375px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+  }
+
+
+
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+}
+
+@media (min-width: 992px) {
+   html {
+       scroll-padding-top: 87.98 ;
+   }
+ 
+   .aboutus-hero {  position: relative;
+    background-image: url(/img/technology-2818664.jpg);
+   background-size: cover;
+   background-position: center;
+   color: $light_gray;
+   z-index: 0;
+}
+
+.prices  {
+
+    .price-info {
+        font-size: 18px;
+    }
+}
+ 
+}
+
+
+
